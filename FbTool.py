@@ -89,6 +89,8 @@ if __name__ == '__main__':
                     with open(cookies_file, 'r') as cookie_f:
                         cookies = json.load(cookie_f)
                         client = fbchat.Client(None, None, max_tries=3, session_cookies=cookies)
+            except KeyboardInterrupt:
+                exit()
             except:
                 print('Unexpected exception: {}'.format(sys.exc_info()))
 
