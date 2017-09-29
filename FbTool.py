@@ -75,9 +75,7 @@ def printCommands():
     print('\tquit')
     print('\t\tExit the program')
 
-if __name__ == '__main__':
-    print('Welcome to FbTool!')
-    
+def login():
     cookies = None
     if os.path.isfile(user_file) and os.path.isfile(cookies_file):
         with open(user_file, 'r') as user_f:
@@ -109,6 +107,11 @@ if __name__ == '__main__':
                 break
             except FBchatUserError:
                 print('Login error: {}'.format(sys.exc_info()))
-    
+
+    return client
+
+if __name__ == '__main__':
+    print('Welcome to FbTool!')
+    client = login()
     run(client)
     print('\nThanks for using FbTool!')
