@@ -1,5 +1,5 @@
 # FbTool
-Command Line Tool for Facebook Messenger
+Command Line Tool for Facebook Messenger that lets you send a message individually to multiple friends.
 
 Requirements:  
 - Python 2.7  
